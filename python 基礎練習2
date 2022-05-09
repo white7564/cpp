@@ -1,0 +1,132 @@
+t = int(input("請輸入氣溫 => "))
+print("今天氣溫 = " + str(t))
+if t < 20:
+    print("加件外套!")
+if t > 27:
+    print("請開冷氣!")
+
+"""練習六
+
+請將撰寫判斷氣溫決定各種提醒輸出，使用if-elif-else方式撰寫
+
+氣溫>=26 開冷氣
+氣溫>=20 開風扇
+氣溫>=13 穿薄外套
+氣溫<13 穿厚外套
+"""
+
+#TODO
+a = int(input("請輸入氣溫氣溫 => "))
+if a>=26:
+  print("開冷氣")
+elif a>=20:
+  print("開風扇")
+elif a>=13:
+  print("穿薄外套")
+elif a<13:
+  print("穿厚外套")
+
+"""練習七: 
+
+if-elif-else
+成績轉換為等級，請修正錯誤
+"""
+
+a = int(input ( "請輸入等級:" ))
+if a >= 90:
+    grade = 'A'
+elif a >= 80:
+    grade = 'B'
+elif a >= 70:
+    grade = 'C'
+elif a >= 60: 
+    grade = 'D'
+else:
+    grade = 'E'
+print ( "對應的a是:" , grade)
+
+"""練習八: 
+
+if-elif-else
+給定一個變數x，判斷是否中獎
+
+如果x小於50，則沒有中獎
+如果x介於60~80，則贏得二獎
+如果x為83、89、97，則贏得頭獎
+如果x不屬於以上狀況，則贏得三獎
+"""
+
+import random
+
+x = random.randint( 0 , 100 )
+if x<=50:
+  print("沒有中獎")
+elif 60<=x<=80:
+  print("贏得二獎")
+elif x==83 or x==89 or x==97:
+  print("贏得頭獎")
+else:
+  print("贏得三獎")
+
+print(f"x={x}")
+##TODO
+
+"""練習九: 
+
+list操作
+camp =["L", "H", "U", "I", "M"]
+
+改成
+
+camp =["L", "H", "U", "-", "C", "I", "N"]
+"""
+
+camp =["L", "H", "U", "I", "M"]
+##TODO
+camp[3]="-"
+camp[4]="C"
+camp.append("I")
+camp.append("M")
+print(camp)
+#
+result = "".join(camp)
+print (f"camp = {result}")
+
+"""練習十: 
+
+for loop
+請輸出自己的名字10次
+"""
+
+#TODO
+k=input("請輸入一個名字:\n")
+for x in range(0,10,1):
+  print(k)
+
+"""練習十一:
+
+ for loop
+在輸入最大值後，可以計算出1加至最大值的總和
+"""
+
+m = int(input("請輸入最大值 =>"))
+s=0
+for m in range(1,m+1):
+  s=s+m
+print("總和 = " + str(s))
+
+"""練習十二:
+
+ for loop
+階層函數值，在輸入階層值後，可以計算出1乘至階層值的總積
+
+
+"""
+
+m = int(input("請輸入階層值 =>"))
+## TODO
+s=0
+for m in range(1,m+1):
+  s=s+m
+#
+print("階層值! = " + str(s))
