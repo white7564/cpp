@@ -1,0 +1,405 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+#define _Add   1
+#define _Sub   2
+#define _Divd  3
+#define _Mod   4
+#define _Mul   5
+//--------------------ADD -------------------------------------
+
+
+
+class CAdd
+{
+private:
+	double Value1, Value2;
+
+public:
+	void SetValue(double V1, double V2);
+	void GetValue(double& V1, double& V2);   // call by reference
+	double Add();
+	CAdd();
+	CAdd(double V1, double V2);
+	CAdd(double V1);
+};
+
+CAdd::CAdd()
+{
+	Value1 = 0;
+	Value2 = 0;
+}
+CAdd::CAdd(double V1, double V2)
+{
+	Value1 = V1;
+	Value2 = V2;
+}
+CAdd::CAdd(double V1)
+{
+	Value1 = V1;
+	Value2 = 0;
+}
+void CAdd::SetValue(double V1, double V2)
+{
+	Value1 = V1;
+	Value2 = V2;
+}
+void CAdd::GetValue(double& V1, double& V2)
+{
+	// call by reference
+	V1 = Value1;
+	V2 = Value2;
+
+}
+double CAdd::Add()
+{
+	return Value1 + Value2;
+}
+
+
+
+//--------------------ADD -------------------------------------
+//-------------------Sub -------------------------------------
+
+class CSub
+{
+	double Value1;
+	double Value2;
+public:
+	void SetValue(double V1, double V2);
+	void GetValue(double& V1, double& V2);
+	double Sub();
+	CSub();
+	CSub(double V1, double V2);
+	CSub(double V1);
+};
+
+
+CSub::CSub()
+{
+	Value1 = 0;
+	Value2 = 0;
+}
+CSub::CSub(double V1, double V2)
+{
+	Value1 = V1;
+	Value2 = V2;
+}
+CSub::CSub(double V1)
+{
+	Value1 = V1;
+	Value2 = 0;
+}
+void  CSub::SetValue(double V1, double V2)
+{
+	Value1 = V1;
+	Value2 = V2;
+
+}
+
+
+void CSub::GetValue(double& V1, double& V2)
+{
+	// call by reference
+	V1 = Value1;
+	V2 = Value2;
+}
+
+
+double CSub::Sub()
+{
+	// TODO: 請在此新增您的實作程式碼.
+	return Value1 - Value2;
+}
+
+//-------------------Sub -------------------------------------
+//-------------------Multiple -------------------------------------
+
+class CMul
+{
+	double Value1;
+	double Value2;
+public:
+	void SetValue(double V1, double V2);
+	void GetValue(double& V1, double& V2);
+	double Mul();
+	CMul();
+	CMul(double V1, double V2);
+	CMul(double V1);
+};
+CMul::CMul()
+{
+	Value1 = 0;
+	Value2 = 0;
+}
+CMul::CMul(double V1, double V2)
+{
+	Value1 = V1;
+	Value2 = V2;
+}
+CMul::CMul(double V1)
+{
+	Value1 = V1;
+	Value2 = 0;
+}
+
+void  CMul::SetValue(double V1, double V2)
+{
+	Value1 = V1;
+	Value2 = V2;
+
+}
+
+
+void CMul::GetValue(double& V1, double& V2)
+{
+	// call by reference
+	V1 = Value1;
+	V2 = Value2;
+}
+
+
+double CMul::Mul()
+{
+	// TODO: 請在此新增您的實作程式碼.
+	return Value1 * Value2;
+}
+
+//-------------------Multiple -------------------------------------
+//-------------------Divid -------------------------------------
+
+class CDivd
+{
+	double Value1;
+	double Value2;
+public:
+
+	void SetValue(double V1, double V2);
+	void GetValue(double& V1, double& V2);
+	double Divd();
+	CDivd();
+	CDivd(double V1, double V2);
+	CDivd(double V1);
+};
+CDivd::CDivd()
+{
+	Value1 = 0;
+	Value2 = 0;
+}
+CDivd::CDivd(double V1, double V2)
+{
+	Value1 = V1;
+	Value2 = V2;
+}
+CDivd::CDivd(double V1)
+{
+	Value1 = V1;
+	Value2 = 0;
+}
+void CDivd::SetValue(double V1, double V2)
+{
+	// TODO: 請在此新增您的實作程式碼.
+	Value1 = V1;
+	Value2 = V2;
+}
+
+
+void CDivd::GetValue(double& V1, double& V2)
+{
+	// call by reference
+	V1 = Value1;
+	V2 = Value2;
+}
+
+
+double CDivd::Divd()
+{
+	// TODO: 請在此新增您的實作程式碼.
+	if (Value2 > -0.000001 && Value2 < 0.000001)
+	{
+		return 0;
+	}
+	return Value1 / Value2;
+
+
+}
+
+
+//-------------------Divid -------------------------------------
+//-------------------Mod -------------------------------------
+
+class CMod
+{
+	double Value1;
+	double Value2;
+public:
+
+	void SetValue(double V1, double V2);
+	void GetValue(double& V1, double& V2);
+	int Mod();
+	CMod();
+	CMod(double V1, double V2);
+	CMod(double V1);
+};
+
+CMod::CMod()
+{
+	Value1 = 0;
+	Value2 = 0;
+}
+CMod::CMod(double V1, double V2)
+{
+	Value1 = V1;
+	Value2 = V2;
+}
+CMod::CMod(double V1)
+{
+	Value1 = V1;
+	Value2 = 0;
+}
+void CMod::SetValue(double V1, double V2)
+{
+	// TODO: 請在此新增您的實作程式碼.
+	Value1 = V1;
+	Value2 = V2;
+}
+
+
+void CMod::GetValue(double& V1, double& V2)
+{
+	// call by reference
+	V1 = Value1;
+	V2 = Value2;
+}
+
+
+int CMod::Mod()
+{
+	// TODO: 請在此新增您的實作程式碼.
+	if (Value2 >= 1 || Value2 <= -1)
+	{
+		return (int)Value1 % (int)Value2;
+	}
+
+	return 0;
+
+}
+
+
+//-------------------Mod -------------------------------------
+
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+// ---------------Math -----------------------------------------------
+
+class CMath :
+	public CAdd, public CMod, public CDivd, public CMul, public CSub
+{
+public:
+	void SetValue(double V1, double V2);
+	void GetValue(double& V1, double& V2);
+	void SetValueWithSelect(int Sel, double V1, double V2);
+	void GetValueWithSelect(int Sel, double& V1, double& V2);
+
+};
+
+
+void CMath::SetValue(double V1, double V2)
+{
+	CAdd::SetValue(V1, V2);
+	CMod::SetValue(V1, V2);
+	CSub::SetValue(V1, V2);
+	CMul::SetValue(V1, V2);
+	CDivd::SetValue(V1, V2);
+}
+
+void CMath::GetValue(double& V1, double& V2)
+{
+	CAdd::GetValue(V1, V2);
+}
+
+void CMath::SetValueWithSelect(int Sel, double V1, double V2)
+{
+	switch (Sel)
+	{
+	case _Add:
+		CAdd::SetValue(V1, V2);
+		break;
+	case _Sub:
+		CSub::SetValue(V1, V2);
+		break;
+	case _Mul:
+		CMul::SetValue(V1, V2);
+		break;
+	case _Divd:
+		CDivd::SetValue(V1, V2);
+		break;
+	case _Mod:
+		CMod::SetValue(V1, V2);
+		break;
+
+	}
+
+}
+void CMath::GetValueWithSelect(int Sel, double& V1, double& V2)
+{
+	switch (Sel)
+	{
+	case _Add:
+		CAdd::GetValue(V1, V2);
+		break;
+	case _Sub:
+		CSub::GetValue(V1, V2);
+		break;
+	case _Mul:
+		CMul::GetValue(V1, V2);
+		break;
+	case _Divd:
+		CDivd::GetValue(V1, V2);
+		break;
+	case _Mod:
+		CMod::GetValue(V1, V2);
+		break;
+
+	}
+}
+// ---------------Math -----------------------------------------------
+
+int main()
+{
+	double x, y, Q;
+
+	CMath MyMath;
+
+	MyMath.SetValue(9, -3);
+	MyMath.GetValue(x, y);
+
+	MyMath.SetValueWithSelect(_Add, 13, -5);
+
+
+	x = MyMath.Add();
+	y = MyMath.Divd();
+
+	cout << "X = " << x << "\n";
+	cout << "Y = " << y << "\n";
+	/*
+
+
+	CAdd MyAdd, MyAdd1(12,34);
+	CAdd MyAdd2(12.0);
+	CMod MyMod;
+	CSub MySub;
+
+	MyAdd.GetValue(x, y);
+	Q = x + y;
+
+	MyMod.SetValue(10, -3);
+	Q = MyMod.Mod();
+	Q = x + y;
+	MyAdd.SetValue(12, 13);
+	MyAdd.GetValue(x, y);
+	Q = MyAdd.Add();
+  */
+	return 0;
+}
