@@ -1,0 +1,47 @@
+id = "CN017"
+my_name= "18"
+class_id ="d1104182002"
+grade ="100"
+height ="180"
+weight ="80"
+print(f"my id is {id},my_name is {my_name},class_id is {class_id},my grade is {grade},my height is {height},my weight is {weight}")
+
+"""練習二
+
+變數交換: 將兩個變數x, y進行交換，注意不要直接寫， 原本 x = 6, y = 3 目標 x = 3, y = 6
+
+
+"""
+
+#原本
+x = 9 
+y = 5
+print (f"x={x} y={y}")
+##目標 TODO 請在下面輸入程式碼 Hit:使用一個新變數
+temple=x
+x=y
+y=temple
+print (f"x={x} y={y}")
+
+"""練習三
+
+將華氏溫度轉換為攝氏溫度
+"""
+
+print("請輸入華氏C")
+f=float(input())
+C = (f- 32) * 5/9
+
+print("攝氏 = ",C,"度C")
+
+"""練習四
+
+輸入半徑計算圓的周長和面積，請修正下列程式碼
+"""
+
+import math
+r=float(input("請輸入半徑："))
+circumference=2*math.pi*r
+area=math.pi*r*r
+print ( "圓的周長: %.2f" % circumference)
+print ( "圓的面積: %.2f"% area)
