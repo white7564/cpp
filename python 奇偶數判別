@@ -1,0 +1,16 @@
+i=1
+while(True):
+    a=input("請輸入一個整數:\n")
+    b=int(a)
+    if (b==-1):
+        break
+    else:
+        i+=1
+if(b%3==0 and b%5==0):
+    print(a,"是3和5的倍數")
+elif(b%3==0):
+    print(a,"是3的倍數")
+elif(b%5==0):
+    print(a,"是5的倍數")
+else:
+    print(a,"不是3和5的倍數")
